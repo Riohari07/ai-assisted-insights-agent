@@ -1,0 +1,26 @@
+[project]
+name = "ai-insights-agent"
+version = "0.1.0"
+description = "MCP agent that translates natural language questions into accurate, explainable, and reproducible data insights"
+authors = [
+    {name = "Jen Kelleman", email = "jenkelleman@microsoft.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/jkelleman/ai-assisted-insights-agent"
+Repository = "https://github.com/jkelleman/ai-assisted-insights-agent"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
