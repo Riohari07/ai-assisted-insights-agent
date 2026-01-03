@@ -1,0 +1,168 @@
+# AI-Assisted Insights Agent Configuration - Kaggle Streaming Data
+
+# Server settings
+server:
+  name: ai-insights-agent-kaggle
+  version: 0.1.0
+  debug: false
+
+# Storage configuration
+storage:
+  type: sqlite
+  path: kaggle_streaming_insights.db
+
+# Data source - CSV files from Kaggle
+data_sources:
+  paid_services:
+    type: csv
+    path: data/paid_video_streaming_services.csv
+    
+  free_services:
+    type: csv
+    path: data/free_video_streaming_services.csv
+    
+  market_summary:
+    type: csv
+    path: data/paid_video_market_summary.csv
+    
+  growth_predictions:
+    type: csv
+    path: data/paid_video_growth_predictions.csv
+
+# Metrics based on actual Kaggle dataset columns
+metrics:
+  total_subscribers:
+    name: Total Subscribers
+    description: Total number of subscribers across all services (in millions)
+    sql_template: SUM(subscribers_millions)
+    table: paid_services
+    filter: ""
+    unit: millions
+    
+  total_services:
+    name: Total Services
+    description: Count of streaming service platforms
+    sql_template: COUNT(DISTINCT service_name)
+    table: paid_services
+    filter: ""
+    unit: services
+    
+  average_monthly_price:
+    name: Average Monthly Price
+    description: Average subscription price per month in USD
+    sql_template: AVG(monthly_price_usd)
+    table: paid_services
+    filter: monthly_price_usd > 0
+    unit: dollars
+    
+  average_churn_rate:
+    name: Average Churn Rate
+    description: Average percentage of subscribers who cancel
+    sql_template: AVG(churn_rate_pct)
+    table: paid_services
+    filter: churn_rate_pct IS NOT NULL
+    unit: percent
+    
+  average_arpu:
+    name: Average Revenue Per User (ARPU)
+    description: Average revenue per user in USD
+    sql_template: AVG(arpu_usd)
+    table: paid_services
+    filter: arpu_usd > 0
+    unit: dollars
+    
+  subscriber_growth_2023_2024:
+    name: Year-over-Year Growth 2023-2024
+    description: Subscriber growth from 2023 to 2024
+    sql_template: (SUM(subscribers_2024_millions) - SUM(subscribers_2023_millions)) / SUM(subscribers_2023_millions) * 100
+    table: paid_services
+    filter: subscribers_2023_millions > 0 AND subscribers_2024_millions > 0
+    unit: percent
+    
+  high_engagement_services:
+    name: High Engagement Services
+    description: Count of services with high engagement
+    sql_template: COUNT(*)
+    table: paid_services
+    filter: engagement_cluster = 'High Engagement'
+    unit: services
+    
+  services_by_parent_company:
+    name: Services by Parent Company
+    description: Distribution of services by parent company
+    sql_template: COUNT(DISTINCT service_name)
+    table: paid_services
+    filter: ""
+    unit: services
+    group_by: parent_company
+    
+  subscribers_by_content_type:
+    name: Subscribers by Content Type
+    description: Total subscribers segmented by content type
+    sql_template: SUM(subscribers_millions)
+    table: paid_services
+    filter: ""
+    unit: millions
+    group_by: content_type
+    
+  market_penetration_global:
+    name: Global Market Penetration
+    description: Services available in 100+ countries
+    sql_template: COUNT(*)
+    table: paid_services
+    filter: countries_available >= 100
+    unit: services
+    
+  platform_distribution:
+    name: Platform Availability
+    description: Average availability across platforms
+    sql_template: AVG(CASE WHEN platforms LIKE '%Web%' THEN 1 ELSE 0 END)
+    table: paid_services
+    filter: ""
+    unit: percent
+
+# Business glossary mapping common terms to metrics
+business_glossary:
+  subscribers: total_subscribers
+  customer_base: total_subscribers
+  users: total_subscribers
+  user_count: total_subscribers
+  
+  price: average_monthly_price
+  subscription_cost: average_monthly_price
+  monthly_fee: average_monthly_price
+  
+  churn: average_churn_rate
+  cancellation_rate: average_churn_rate
+  attrition: average_churn_rate
+  
+  revenue_per_user: average_arpu
+  arpu: average_arpu
+  average_revenue: average_arpu
+  
+  growth: subscriber_growth_2023_2024
+  year_over_year: subscriber_growth_2023_2024
+  yoy_growth: subscriber_growth_2023_2024
+  
+  platforms: total_services
+  streaming_services: total_services
+  competitors: total_services
+  
+  engagement: high_engagement_services
+  active_users: high_engagement_services
+
+# Query execution settings
+query_settings:
+  default_time_period: "2024"
+  timeout_seconds: 30
+  max_rows: 10000
+  enable_query_cache: true
+  cache_ttl_seconds: 300
+
+# Data quality thresholds
+data_quality:
+  freshness_threshold_hours: 24
+  completeness_threshold_pct: 95
+  anomaly_detection:
+    enabled: true
+    std_dev_threshold: 2
